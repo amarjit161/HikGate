@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/hg_background">
+
+    <LinearLayout
+        android:id="@+id/toolbarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/hg_surface">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <ImageButton android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@android:drawable/ic_media_previous" android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/hg_text_primary" android:contentDescription="Back" />
+
+            <ImageButton android:id="@+id/btnForward" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@android:drawable/ic_media_next" android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/hg_text_primary" android:contentDescription="Forward" />
+
+            <ImageButton android:id="@+id/btnRefresh" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@android:drawable/ic_popup_sync" android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/hg_text_primary" android:contentDescription="Refresh" />
+
+            <ImageButton android:id="@+id/btnHome" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_myplaces" android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/hg_text_primary" android:contentDescription="Home" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addressBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="6dp"
+                android:background="@color/hg_background"
+                android:textColor="@color/hg_text_primary"
+                android:singleLine="true"
+                android:imeOptions="actionGo"
+                android:inputType="textUri"
+                android:padding="8dp" />
+
+            <ImageButton android:id="@+id/btnGo" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@android:drawable/ic_media_play" android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/hg_primary" android:contentDescription="Go" />
+
+            <ImageButton android:id="@+id/btnFullscreen" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_zoom" android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/hg_text_primary" android:contentDescription="Fullscreen" />
+
+            <ImageButton android:id="@+id/btnUserAgent" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_manage" android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/hg_text_primary" android:contentDescription="User-Agent" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:max="100"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+</LinearLayout>

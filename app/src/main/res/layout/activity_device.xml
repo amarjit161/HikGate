@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/hg_background">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/hg_surface"
+        app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:titleTextColor="@color/hg_text_primary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/deviceStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hg_text_secondary"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            tools:text="192.168.1.100:80 · checking..."
+            xmlns:tools="http://schemas.android.com/tools" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenWeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/hg_primary"
+            android:text="@string/action_open_web" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLiveView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/hg_primary_variant"
+            android:text="@string/action_live_view" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTest"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/action_test_connection" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/hg_error"
+            android:text="Delete device" />
+
+        <TextView
+            android:id="@+id/capabilityNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/hg_text_secondary"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</LinearLayout>

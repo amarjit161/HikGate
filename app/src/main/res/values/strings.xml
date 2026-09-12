@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">HikGate</string>
+    <string name="add_device">Add Device</string>
+    <string name="device_details">Device</string>
+    <string name="web_interface">Web Interface</string>
+    <string name="live_view">Live View</string>
+
+    <string name="hint_name">Camera / NVR name</string>
+    <string name="hint_ip">IP address or hostname</string>
+    <string name="hint_port">Port (default 80)</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_rtsp_port">RTSP port (default 554)</string>
+    <string name="hint_channel">Channel (e.g. 101 = ch1, main stream)</string>
+
+    <string name="action_open_web">Open Hikvision Web Interface</string>
+    <string name="action_live_view">Live View</string>
+    <string name="action_save">Save Device</string>
+    <string name="action_test_connection">Test Connection</string>
+
+    <string name="ua_chrome">Modern Chrome</string>
+    <string name="ua_ie11">Internet Explorer 11 (emulated UA only)</string>
+    <string name="ua_edge_ie_mode">Microsoft Edge \"IE Mode\" (emulated UA only)</string>
+    <string name="ua_custom">Custom User-Agent</string>
+
+    <string name="warn_http_title">Insecure connection</string>
+    <string name="warn_http_body">This will connect over plain HTTP. Credentials and video may be visible to anyone on the network path. Continue?</string>
+
+    <string name="warn_cert_title">Untrusted certificate</string>
+    <string name="warn_cert_body">This device presented a certificate Android does not trust (common with self-signed Hikvision certs). Only continue if you recognize this device.</string>
+
+    <string name="activex_detected_title">This page needs ActiveX / a legacy plugin</string>
+    <string name="activex_detected_body">Android cannot run ActiveX or NPAPI plugins — no browser on Android can, including this one. Changing the User-Agent will not make it work. Use Live View instead, which talks to the camera directly over RTSP/ISAPI.</string>
+</resources>

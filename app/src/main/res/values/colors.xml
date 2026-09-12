@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hg_background">#0F1115</color>
+    <color name="hg_surface">#1A1D24</color>
+    <color name="hg_primary">#2F81F7</color>
+    <color name="hg_primary_variant">#1B5FCC</color>
+    <color name="hg_on_primary">#FFFFFF</color>
+    <color name="hg_text_primary">#F2F3F5</color>
+    <color name="hg_text_secondary">#9AA3AF</color>
+    <color name="hg_online">#3ECF6A</color>
+    <color name="hg_offline">#6B7280</color>
+    <color name="hg_error">#E5484D</color>
+    <color name="hg_warning">#E5A100</color>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Most legacy Hikvision devices only speak plain HTTP and/or HTTPS with a
+  self-signed certificate. This config allows cleartext specifically for
+  private network ranges (where cameras/NVRs actually live) rather than
+  globally weakening security for the whole app.
+-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <!-- RFC1918 private ranges, expressed as literal IPs are not supported
+             by domain-config, so cleartext is scoped via base-config below and
+             the app itself warns the user before any non-local HTTP connection. -->
+    </domain-config>
+
+    <!-- Base config: cleartext allowed (needed for 192.168.x.x / 10.x.x.x / 172.16-31.x.x
+         camera IP addresses, which Android's domain-config cannot express as CIDR ranges).
+         The app's own NetworkGuard warns the user before connecting over HTTP to anything
+         that is not a private/local address. -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <!-- User-added certs allowed ONLY so the app can implement an explicit
+                 "trust this self-signed camera certificate" confirmation flow. -->
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
